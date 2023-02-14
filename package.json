@@ -1,0 +1,49 @@
+{
+    "name":            "grav-theme-intermediator",
+    "version":         "0.1.1",
+    "homepage":        "https://github.com/koen-daamen/grav-theme-intermediator",
+    "author":          "Koen Daamen <intermediator.grav.com@kereborn.nl>",
+    "description":     "Intermediator: a theme inherited from Quark, mirroring Mediator",
+    "main":            "",
+    "repository":      {
+        "type": "git",
+        "url":  "https://github.com/koen-daamen/grav-theme-intermediator.git"
+    },
+    "license":         "MIT",
+    "keywords":        [
+        "css",
+        "framework",
+        "flexbox",
+        "responsive",
+        "mobile-friendly",
+        "front-end",
+        "sass",
+        "modern"
+    ],
+    "bugs":            {
+        "url": "https://github.com/koen-daamen/grav-theme-intermediator/issues"
+    },
+    "devDependencies": {
+        "gulp":              "^4.0.0",
+        "gulp-autoprefixer": "^6.1.0",
+        "gulp-clean-css":    "^3.9.4",
+        "gulp-csscomb":      "^3.0.8",
+        "gulp-rename":       "^1.2.2",
+        "gulp-sass":         "^4.0.1"
+    },
+    "browserslist":    [
+        "last 4 Chrome versions",
+        "Edge >= 12",
+        "Firefox ESR",
+        "last 4 Safari versions",
+        "last 4 Opera versions",
+        "Explorer >= 10"
+    ],
+    "scripts":         {
+        "dev":   "gulp watch",
+        "build": "gulp build"
+    },
+    "dependencies":    {
+        "gulp-sourcemaps": "^2.6.4"
+    }
+}
