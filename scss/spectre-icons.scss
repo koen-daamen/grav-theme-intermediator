@@ -1,0 +1,21 @@
+//// Core Variable
+//@import "../../quark/scss/theme/variables";
+//@import "../../quark/scss/spectre/variables";
+
+// Override Variables
+@import "overrides/quark-variables";
+@import "overrides/spectre-variables";
+@import "theme/variables";
+
+// Mixins
+@import "../../quark/scss/spectre/mixins";
+
+/*! Spectre.css Icons v#{$version} | MIT License | github.com/picturepan2/spectre */
+// Icons
+@import "../../quark/scss/spectre/icons/icons-core";
+@import "../../quark/scss/spectre/icons/icons-navigation";
+@import "../../quark/scss/spectre/icons/icons-action";
+@import "../../quark/scss/spectre/icons/icons-object";
+
+// Override Styles
+@import "overrides/spectre-styles";

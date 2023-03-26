@@ -19,3 +19,11 @@ blog-page:          '/blog'
 spectre:
   exp:   false
   icons: false
+branding:
+  image:
+    desktop: desktop.jpg
+    mobile:  mobile.jpg
+emblem:
+  image:
+    desktop: desktop.jpg
+    mobile:  mobile.jpg

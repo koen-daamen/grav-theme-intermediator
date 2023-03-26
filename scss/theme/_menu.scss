@@ -1,0 +1,16 @@
+nav {
+    & a,
+    & a:visited {
+        color: var(--background) !important;
+    }
+
+    & .dropmenu ul ul {
+        background: var(--foreground-seethrough) !important;
+    }
+
+    & .dropmenu ul li a.active,
+    & .dropmenu ul li a:focus,
+    & .dropmenu ul li a:hover {
+        color: var(--dominant) !important;
+    }
+}

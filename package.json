@@ -1,16 +1,16 @@
 {
-    "name":            "grav-theme-intermediator",
-    "version":         "0.1.1",
-    "homepage":        "https://github.com/koen-daamen/grav-theme-intermediator",
-    "author":          "Koen Daamen <intermediator.grav.com@kereborn.nl>",
-    "description":     "Intermediator: a theme inherited from Quark, mirroring Mediator",
-    "main":            "",
-    "repository":      {
+    "name": "grav-theme-intermediator",
+    "version": "0.1.1",
+    "homepage": "https://github.com/koen-daamen/grav-theme-intermediator",
+    "author": "Koen Daamen <intermediator.grav.com@kereborn.nl>",
+    "description": "Intermediator: a theme inherited from Quark, mirroring Mediator",
+    "main": "",
+    "repository": {
         "type": "git",
-        "url":  "https://github.com/koen-daamen/grav-theme-intermediator.git"
+        "url": "https://github.com/koen-daamen/grav-theme-intermediator.git"
     },
-    "license":         "MIT",
-    "keywords":        [
+    "license": "MIT",
+    "keywords": [
         "css",
         "framework",
         "flexbox",
@@ -20,18 +20,18 @@
         "sass",
         "modern"
     ],
-    "bugs":            {
+    "bugs": {
         "url": "https://github.com/koen-daamen/grav-theme-intermediator/issues"
     },
     "devDependencies": {
-        "gulp":              "^4.0.0",
-        "gulp-autoprefixer": "^6.1.0",
-        "gulp-clean-css":    "^3.9.4",
-        "gulp-csscomb":      "^3.0.8",
-        "gulp-rename":       "^1.2.2",
-        "gulp-sass":         "^4.0.1"
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-csscomb": "^3.1.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^5.1.0"
     },
-    "browserslist":    [
+    "browserslist": [
         "last 4 Chrome versions",
         "Edge >= 12",
         "Firefox ESR",
@@ -39,11 +39,12 @@
         "last 4 Opera versions",
         "Explorer >= 10"
     ],
-    "scripts":         {
-        "dev":   "gulp watch",
+    "scripts": {
+        "dev": "gulp watch",
         "build": "gulp build"
     },
-    "dependencies":    {
-        "gulp-sourcemaps": "^2.6.4"
+    "dependencies": {
+        "gulp-sourcemaps": "^3.0.0",
+        "sass": "^1.58.3"
     }
 }

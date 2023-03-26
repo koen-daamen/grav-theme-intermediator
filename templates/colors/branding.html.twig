@@ -1,0 +1,19 @@
+{% block branding_color %}
+    {% if page.header.branding.color %}
+        {% if page.header.branding.color.rotate %}
+            {% set rotate = page.header.branding.color.rotate %}
+            <style>
+                nav .navbar-brand > img {
+                    filter: hue-rotate({{ rotate }}deg) !important;
+                }
+            </style>
+        {% elseif page.header.branding.color.set %}
+            {% set color = page.header.branding.color.set %}
+            <style>
+                nav .navbar-brand > img {
+                    color: {{ color }} !important;
+                }
+            </style>
+        {% endif %}
+    {% endif %}
+{% endblock %}

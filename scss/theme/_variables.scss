@@ -1,1 +1,50 @@
 // variables go here
+
+/*******************************
+ ****** Spectre Overrides ******
+ *******************************/
+
+// Colors
+
+$primary-color:            #3085ee !default;
+$dark-color:               #454d5d !default;
+$light-color:              #ffffff !default;
+
+$color-background:         $light-color !default;
+$gray-color:               lighten($dark-color, 40%) !default;
+$gray-color-dark:          darken($gray-color, 25%) !default;
+$border-color:             lighten($dark-color, 60%) !default;
+$bg-color:                 lighten($dark-color, 66%) !default;
+$body-font-color:          lighten($dark-color, 5%) !default;
+$line-height:              1rem !default;
+
+// Layout
+$horiz-padding:            1rem;
+$vert-padding:             2rem 0 2rem;
+
+// Fonts
+$min-responsive-font-size: 16px;
+$font-serif:               Linux Libertine;
+$font-sans:                "Open Sans", MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif !default;
+
+// Header
+$header-height-large:      4rem;
+$header-height-small:      2.3rem;
+$header-color-dark:        $dark-color;
+$header-text-light:        $light-color;
+$header-text-dark:         darken($dark-color, 15%);
+
+// Dropdown Menu
+$dropmenu-bg:              $light-color;
+$dropmenu-hover-text:      $primary-color;
+$dropmenu-horiz-padding:   20px;
+$dropmenu-vert-padding:    7px;
+$dropmenu-child-padding:   10px;
+$dropmenu-shadow:          0 3px 5px rgba(0, 0, 0, 0.1);
+
+// Mobile Menu
+$mobile-color-main:        $primary-color;
+$mobile-color-active:      $light-color;
+$mobile-color-link:        $light-color;
+$mobile-button-height:     24px;
+$mobile-button-width:      28px;

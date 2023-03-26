@@ -1,8 +1,16 @@
-// Core variables and mixins
-@import "../../quark/scss/theme/variables";
-@import "../../quark/scss/spectre/variables";
+//// Core Variable
+//@import "../../quark/scss/theme/variables";
+//@import "../../quark/scss/spectre/variables";
+
+// Override Variables
+@import "overrides/quark-variables";
+@import "overrides/spectre-variables";
+@import "theme/variables";
+
+// Mixins
 @import "../../quark/scss/spectre/mixins";
 
+// Core Theme
 @import "../../quark/scss/theme/fonts";
 @import "../../quark/scss/theme/mixins";
 @import "../../quark/scss/theme/framework";
@@ -11,10 +19,13 @@
 @import "../../quark/scss/theme/mobile";
 @import "../../quark/scss/theme/animation";
 
-@import "../../quark/scss/theme/header";
+@import "overrides/quark/header";
 @import "../../quark/scss/theme/footer";
 @import "../../quark/scss/theme/menu";
 
 // Extra Skeleton Styling
 @import "../../quark/scss/theme/blog";
 @import "../../quark/scss/theme/onepage";
+
+// Override Styles
+@import "overrides/quark-styles";

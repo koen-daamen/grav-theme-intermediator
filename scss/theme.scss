@@ -1,2 +1,15 @@
-@import "quark";
-@import "intermediator";
+// Variables
+@import "overrides/quark-variables";
+@import "overrides/spectre-variables";
+@import "theme/variables";
+@import "theme/colors";
+
+// harvest all scss files for the Intermediator theme
+@import "theme/animation";
+@import "theme/blocks";
+@import "theme/buttons";
+@import "theme/links";
+@import "theme/typography";
+@import "theme/menu";
+@import "theme/visibility";
+@import "theme/zindex";

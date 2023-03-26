@@ -1,0 +1,65 @@
+//// Core Variable
+//@import "../../quark/scss/theme/variables";
+//@import "../../quark/scss/spectre/variables";
+
+// Override Variables
+@import "overrides/quark-variables";
+@import "overrides/spectre-variables";
+@import "theme/variables";
+
+// Mixins
+@import "../../quark/scss/spectre/mixins";
+
+// Core Theme
+
+/*! Spectre.css v#{$version} | MIT License | github.com/picturepan2/spectre */
+// Reset and dependencies
+@import "../../quark/scss/spectre/normalize";
+@import "../../quark/scss/spectre/base";
+
+// Elements
+@import "../../quark/scss/spectre/typography";
+@import "../../quark/scss/spectre/asian";
+@import "../../quark/scss/spectre/tables";
+@import "../../quark/scss/spectre/buttons";
+@import "../../quark/scss/spectre/forms";
+@import "../../quark/scss/spectre/labels";
+@import "../../quark/scss/spectre/codes";
+@import "../../quark/scss/spectre/media";
+
+// Layout
+@import "overrides/spectre/layout";
+@import "../../quark/scss/spectre/hero";
+@import "../../quark/scss/spectre/navbar";
+
+// Components
+@import "../../quark/scss/spectre/accordions";
+@import "../../quark/scss/spectre/avatars";
+@import "../../quark/scss/spectre/badges";
+@import "../../quark/scss/spectre/breadcrumbs";
+@import "../../quark/scss/spectre/bars";
+@import "../../quark/scss/spectre/cards";
+@import "../../quark/scss/spectre/chips";
+@import "../../quark/scss/spectre/dropdowns";
+@import "../../quark/scss/spectre/empty";
+@import "../../quark/scss/spectre/menus";
+@import "../../quark/scss/spectre/modals";
+@import "../../quark/scss/spectre/navs";
+@import "../../quark/scss/spectre/pagination";
+@import "../../quark/scss/spectre/panels";
+@import "../../quark/scss/spectre/popovers";
+@import "../../quark/scss/spectre/steps";
+@import "../../quark/scss/spectre/tabs";
+@import "../../quark/scss/spectre/tiles";
+@import "../../quark/scss/spectre/toasts";
+@import "../../quark/scss/spectre/tooltips";
+
+// Utility classes
+@import "../../quark/scss/spectre/animations";
+@import "../../quark/scss/spectre/utilities";
+
+// Extras
+@import "../../quark/scss/theme/extensions";
+
+// Override Styles
+@import "overrides/spectre-styles";

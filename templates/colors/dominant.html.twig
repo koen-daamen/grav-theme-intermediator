@@ -1,0 +1,39 @@
+{% block dominant %}
+    <style>
+        {% if page.header.dominant.color %}
+        {% if page.header.dominant.color.rotate %}
+        {% set rotate = page.header.dominant.color.rotate %}
+        nav .dropmenu ul li a.active,
+        nav .dropmenu ul li a:focus,
+        nav .dropmenu ul li a:hover {
+            filter: hue-rotate({{ rotate }}deg) !important;
+        }
+
+        {% elseif page.header.dominant.color.set %}
+        {% set color = page.header.dominant.color.set %}
+        :root {
+            --dominant: {{ color }} !important;
+        }
+
+        {% endif %}
+        {% endif %}
+        {% if page.header.dominant.contrast %}
+        {% if page.header.dominant.contrast.rotate %}
+        {% set rotate = page.header.dominant.contrast.rotate %}
+        nav .dropmenu ul li a.active,
+        nav .dropmenu ul li a:focus,
+        nav .dropmenu ul li a:hover {
+            filter: hue-rotate({{ rotate }}deg) !important;
+        }
+
+        {% elseif page.header.dominant.contrast.set %}
+        {% set color = page.header.dominant.contrast.set %}
+        :root {
+            --dominant-contrast: {{ color }} !important;
+        }
+
+        {% endif %}
+        {% endif %}
+
+    </style>
+{% endblock %}

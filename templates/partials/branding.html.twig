@@ -1,0 +1,21 @@
+<a href="{{ home_url }}" class="navbar-brand mr-10">
+    {% if not page.header.branding.hide %}
+        {% if page.header.branding.image %}
+            {% set branding = (mobile ? 'page.header.branding.image.mobile' : 'page.header.branding.image.desktop') %}
+            <img src="{{ base_url_relative }}{{ page.media[ branding ].url }}" alt="{{ site.title }}"/>
+            {% if ( page.header.branding ) and ( ( page.header.branding.color ) ) %}{% include 'colors/branding.html.twig' %}{% endif %}
+        {% elseif site.branding.image %}
+            {% set branding = (mobile ? 'site.branding.image.mobile' : 'site.branding.image.desktop') %}
+            <img src="{{ base_url_relative }}{{ page.media[ branding ].url }}" alt="{{ site.title }}"/>
+            {% if ( page.header.branding ) and ( ( page.header.branding.color ) ) %}{% include 'colors/branding.html.twig' %}{% endif %}
+        {% else %}
+            {% set branding = theme_var(mobile ? 'branding.image.mobile' : 'branding.image.desktop') %}
+            {% if branding %}
+                <img src="{{ url('theme://images/branding/' ~ branding ) }}" alt="{{ site.title }}"/>
+                {% if ( page.header.branding ) and ( ( page.header.branding.color ) ) %}{% include 'colors/branding.html.twig' %}{% endif %}
+            {% else %}
+                {% include('@images/grav-branding.svg') %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+</a>

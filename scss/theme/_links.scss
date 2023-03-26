@@ -1,0 +1,35 @@
+a[class^="icon-"] {
+    text-decoration: none !important;
+}
+
+a {
+    color:           var(--links);
+    text-decoration: none;
+
+    &:visited {
+        color:           var(--links);
+        text-decoration: none;
+    }
+
+    &.active,
+    &:focus,
+    &:hover {
+        color:                     var(--links);
+        text-decoration:           underline;
+        text-decoration-thickness: 1px;
+    }
+}
+
+.post .post-content a {
+    filter: brightness(50%);
+
+    &:visited {
+        filter: brightness(50%);
+    }
+
+    &.active,
+    &:focus,
+    &:hover {
+        filter: brightness(50%);
+    }
+}

@@ -1,3 +1,14 @@
-root {
-    background-color: blue;
+:root {
+    --foreground:            hsla(210, 15%, 5%, 1);
+    --background:            hsla(0, 0%, 100%, 1);
+
+    --foreground-seethrough: hsla(210, 15%, 5%, 0.5);
+    --background-seethrough: hsla(0, 0%, 100%, 0.5);
+
+    --primary:               hsla(210, 100%, 66%, 1);
+    --secondary:             var(--foregrond);
+    --dominant:              var(--primary);
+    --dominant-contrast:     var(--background);
+
+    --links:                 var(--dominant);
 }

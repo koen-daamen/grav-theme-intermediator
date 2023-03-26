@@ -1,0 +1,51 @@
+{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
+{% set grid_size = theme_var('grid-size') %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% use 'blocks/base.html.twig' %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+    {% block head deferred %}
+    <meta charset="utf-8"/>
+    <title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    {% include 'partials/metadata.html.twig' %}
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}"/>
+    <link rel="canonical" href="{{ page.url(true, true) }}"/>
+    {% endblock head %}
+
+    {% include 'partials/css.html.twig' %}
+    {% include 'partials/js.html.twig' %}
+    {% include 'partials/assets.html.twig' %}
+    {% if ( page.header.dominant) and ( ( page.header.dominant.color ) ) %}
+        {% include 'colors/dominant.html.twig' %}
+    {% endif %}
+
+</head>
+{% block body %}
+<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
+{% endblock %}
+
+{% set home = pages.find(config.system.home.alias) %}
+{% include 'partials/header.html.twig' %}
+
+<!-- content start -->
+{% block content %}
+    <div class="page-content">
+        <div class="wrapper">
+            {{ content|raw }}
+        </div>
+    </div>
+{% endblock %}
+<!-- content end -->
+
+<!-- footer start -->
+{% block footer %}
+    {% include 'partials/footer.html.twig' %}
+{% endblock %}
+<!-- footer end -->
+{% include 'partials/mobile.html.twig' %}
+
+{% include 'partials/bottom.html.twig' %}
+{% include 'partials/javascripts.html.twig' %}
+</body>
+</html>
