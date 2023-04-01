@@ -3,14 +3,14 @@
         {% if page.header.emblem.color.rotate %}
             {% set rotate = page.header.emblem.color.rotate %}
             <style>
-                nav .navbar-brand > img {
+                header a.blog-logo, header img.blog-emblem {
                     filter: hue-rotate({{ rotate }}deg) !important;
                 }
             </style>
         {% elseif page.header.emblem.color.set %}
             {% set color = page.header.emblem.color.set %}
             <style>
-                nav .navbar-brand > img {
+                header a.blog-logo, header img.blog-emblem {
                     color: {{ color }} !important;
                 }
             </style>

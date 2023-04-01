@@ -1,0 +1,14 @@
+.emblem-container {
+    text-align: center;
+    height:     0px;
+}
+
+.blog-emblem {
+    position: relative;
+    bottom:   128px;
+    z-index:  99;
+}
+
+img.blog-emblem {
+    max-width: unset !important;
+}

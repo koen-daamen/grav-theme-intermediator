@@ -1,0 +1,33 @@
+.mobile-menu .button_container span { background: var(--dominant) !important;}
+
+.mobile-menu .button_container {
+    top: 23px !important;
+}
+
+.mobile-container .treemenu li a.active, .treemenu li a:focus, .treemenu li a:hover {
+    text-decoration: none;
+    color:           var(--dominant) !important;
+}
+
+.mobile-container .navbar-mobile-title {
+    position:    relative;
+    bottom:      1rem;
+    left:        0.75rem;
+    font-size:   1.5rem;
+    font-weight: 700;
+}
+
+.mobile-logo > a { text-decoration: none !important;}
+
+nav.overlay-menu {overflow-y: auto;}
+
+nav.overlay-menu .toggler {
+    width:    2rem !important;
+    position: relative;
+    top:      1px;
+}
+
+nav.overlay-menu .tree-opened .toggler,
+nav.overlay-menu .tree-closed .toggler {
+    font-size: 2rem !important;
+}

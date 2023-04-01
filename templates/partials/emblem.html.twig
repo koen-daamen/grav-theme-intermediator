@@ -1,17 +1,42 @@
-{% if page.header.emblem.image.desktop %}
-    {% set emblem = (mobile ? 'page.header.emblem.image.mobile' : 'page.header.emblem.image.desktop') %}
-    <a class="blog-logo" href="{{ base_url_relative }}" style="background-image: url({{ page.media[emblem].url }})">{{ site.title }}</a>
-    {% if ( page.header.emblem ) and ( ( page.header.emblem.color ) ) %}{% include 'colors/emblem.html.twig' %}{% endif %}
-{% elseif site.emblem.image.desktop %}
-    {% set emblem = (mobile ? 'site.emblem.image.mobile' : 'site.emblem.image.desktop') %}
-    <a class="blog-logo" href="{{ base_url_relative }}" style="background-image: url({{ uri.rootUrl() }}/user/images/emblems/{{ emblem }})">{{ site.title }}</a>
-    {% if ( page.header.emblem ) and ( ( page.header.emblem.color ) ) %}{% include 'colors/emblem.html.twig' %}{% endif %}
-{% else %}
-    {% set emblem = theme_var(mobile ? 'emblem.image.mobile' : 'emblem.image.desktop') %}
-    {% if emblem %}
-        <a class="blog-logo" href="{{ base_url_relative }}" style="background-image: url({{ url('theme://images/emblem/' ~ emblem ) }})">{{ site.title }}</a>
-        {% if ( page.header.emblem ) and ( ( page.header.emblem.color ) ) %}{% include 'colors/emblem.html.twig' %}{% endif %}
+{% if page.header.emblem.image or page.header.emblem.seal %}
+    {% set type = (page.header.emblem.image ? 'emblem' : 'logo') %}
+    {% set emblem = (page.header.emblem.image ? page.header.emblem.image : page.header.emblem.seal) %}
+    {% set emblem = (mobile ? emblem.mobile : emblem.desktop) %}
+    {% if type == 'emblem' %}
+        <div class="emblem-container">
+            <img class="blog-{{ type }}" src="{{ uri.rootUrl() }}/user/images/logos/{{ emblem }}" alt="{{ site.title }}"/>
+        </div>
     {% else %}
-        {% include('@images/grav-logo.svg') %}
+        <a class="blog-{{ type }}" href="{{ base_url_relative }}" style="background-image: url({{ uri.rootUrl() }}/user/images/logos/{{ emblem }})">{{ site.title }}</a>
+    {% endif %}
+{% elseif site.emblem.image or site.emblem.seal %}
+    {% set type = (site.emblem.image ? 'emblem' : 'logo') %}
+    {% set emblem = (site.emblem.image ? site.emblem.image : site.emblem.seal) %}
+    {% set emblem = (mobile ? emblem.mobile : emblem.desktop) %}
+    {% if type == 'emblem' %}
+        <div class="emblem-container">
+            <img class="blog-{{ type }}" src="{{ uri.rootUrl() }}/user/images/logos/{{ emblem }}" alt="{{ site.title }}"/>
+        </div>
+    {% else %}
+        <a class="blog-{{ type }}" href="{{ base_url_relative }}" style="background-image: url({{ uri.rootUrl() }}/user/images/emblems/{{ emblem }})">{{ site.title }}</a>
+    {% endif %}
+{% else %}
+    {% set emblem = (mobile ? 'mobile' : 'desktop') %}
+    {% if emblem %}
+        <div class="emblem-container">
+            <img class="blog-emblem" src="{{ url('theme://images/logos/' ~ emblem ~ '.jpg' ) }}" alt="{{ site.title }}"/>
+        </div>
+    {% endif %}
+{% endif %}
+{% if ( page.header.emblem ) and ( ( page.header.emblem.color ) ) %}{% include 'colors/emblem.html.twig' %}{% endif %}
+{% if ( type == 'emblem') %}
+    {% if  ( page.header.emblem.position ) %}
+        <style>
+            .blog-emblem { {{ page.header.emblem.position }} }
+        </style>
+    {% elseif  ( site.emblem.position ) %}
+        <style>
+            .blog-emblem { {{ site.emblem.position }} }
+        </style>
     {% endif %}
 {% endif %}

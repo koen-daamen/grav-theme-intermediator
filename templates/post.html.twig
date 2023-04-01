@@ -25,11 +25,8 @@
                 <br>
                 <br>
             {% endif %}
-            <section class="post-content">
-                {% if page.template == 'post' %}
-                    <span class="post-reading-time"></span> read
-                {% endif %}
-                <a name="topofpage"></a>
+            <section class="post-content volume">
+                <a name="topofpage"></a> <span class="post-reading-time"></span> read | <span class="post-word-count"></span> words
                 {{ content|raw }}
             </section>
 

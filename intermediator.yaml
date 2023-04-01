@@ -21,9 +21,9 @@ spectre:
   icons: false
 branding:
   image:
-    desktop: desktop.jpg
-    mobile:  mobile.jpg
+    desktop: 48/seal.light.color.metal.png
+    mobile:  48/seal.light.color.metal.png
 emblem:
   image:
-    desktop: desktop.jpg
-    mobile:  mobile.jpg
+    desktop: 128/emblem.light.color.metal.png
+    mobile:  128/emblem.light.color.metal.png

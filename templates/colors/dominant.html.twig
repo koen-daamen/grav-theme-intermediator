@@ -5,7 +5,10 @@
         {% set rotate = page.header.dominant.color.rotate %}
         nav .dropmenu ul li a.active,
         nav .dropmenu ul li a:focus,
-        nav .dropmenu ul li a:hover {
+        nav .dropmenu ul li a:hover,
+        .mobile-menu .button_container span,
+        .treemenu li a.active, .treemenu li a:focus, .treemenu li a:hover,
+        .mobile-container .navbar-mobile-title {
             filter: hue-rotate({{ rotate }}deg) !important;
         }
 
@@ -22,7 +25,10 @@
         {% set rotate = page.header.dominant.contrast.rotate %}
         nav .dropmenu ul li a.active,
         nav .dropmenu ul li a:focus,
-        nav .dropmenu ul li a:hover {
+        nav .dropmenu ul li a:hover,
+        .mobile-menu .button_container span,
+        .treemenu li a.active, .treemenu li a:focus, .treemenu li a:hover,
+        .mobile-container .navbar-mobile-title {
             filter: hue-rotate({{ rotate }}deg) !important;
         }
 

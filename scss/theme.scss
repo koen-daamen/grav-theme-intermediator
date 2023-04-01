@@ -5,11 +5,15 @@
 @import "theme/colors";
 
 // harvest all scss files for the Intermediator theme
+@import "theme/typography";
 @import "theme/animation";
 @import "theme/blocks";
 @import "theme/buttons";
+@import "theme/branding";
+@import "theme/emblem";
 @import "theme/links";
-@import "theme/typography";
 @import "theme/menu";
+@import "theme/mobile";
+@import "theme/scrollbars";
 @import "theme/visibility";
 @import "theme/zindex";

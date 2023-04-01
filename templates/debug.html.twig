@@ -1,3 +1,9 @@
 <script> console.log({{ page.header|json_encode|raw }}); </script>
-<script> console.log({{ page.parent.header|json_encode|raw }}); </script>
-<span class="tooltip" data-tooltip="Lorem ipsum dolor sit amet">
+<script> console.log({{ page.parent.header|json_encode|raw }}); </script><span class="tooltip" data-tooltip="Lorem ipsum dolor sit amet">
+<style>
+    .teaserimage {
+        -webkit-box-shadow: 0 0 0.2rem 0.2rem hsl(0, 0%, 20%);
+        -moz-box-shadow:    0 0 0.2rem 0.2rem hsl(0, 0%, 20%);
+        box-shadow:         0 0 0.2rem 0.2rem hsl(0, 0%, 20%);
+    }
+</style>

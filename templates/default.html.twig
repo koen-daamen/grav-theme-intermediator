@@ -13,8 +13,21 @@
 
     <header class="blog-header">
         {% include 'partials/emblem.html.twig' %}
-        <h1 class="blog-title">{{ site.title }}</h1>
-        <h2 class="blog-description">{{ site.description }}</h2>
+        {% if (page.title|underscorize) == 'home' %}
+            {% if site.title %}
+                <h1 class="blog-title">{{ site.title }}</h1>
+            {% endif %}
+            {% if site.description %}
+                <h2 class="blog-description">{{ site.description }}</h2>
+            {% endif %}
+        {% else %}
+            {% if page.title %}
+                <h1 class="blog-title">{{ page.title }}</h1>
+            {% endif %}
+            {% if page.header.description %}
+                <h2 class="blog-description">{{ page.header.description }}</h2>
+            {% endif %}
+        {% endif %}
         <div class="custom-links">
             {% for social in site.social %}
                 {% if social.url %}
@@ -26,7 +39,7 @@
         </div>
     </header>
 
-    <main class="content" role="main">
+    <main class="content volume" role="main">
 
         {% set featured = taxonomy.findTaxonomy({'tag':'featured'}) %}
 

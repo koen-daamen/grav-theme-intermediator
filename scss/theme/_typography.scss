@@ -1,14 +1,97 @@
-// Paragraphs
+body, html {
+    font-size: 16px !important;
+}
+
+body, html, p, div, a, li, figcaption,
+h1, h2, h3, h4, h5, h6, {
+    font-family: $font-sans !important;
+}
+
 p {
     margin: $line-height 0 $line-height 0 !important;
 }
 
+li {
+    & p {
+        margin:  0 !important;
+        padding: 0 !important;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-sans !important;
-    margin-top:  unset;
-    color:       unset;
+    margin-top: unset;
+    color:      unset;
+}
+
+.volume {
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+        font-weight: 100 !important;
+        margin-top:  unset;
+        color:       unset;
+    }
+
+    & .h1, & h1 {
+        font-size: 1.6rem !important;
+    }
+
+    & .h2, & h2 {
+        font-size: 1.4rem !important;
+    }
+
+    & .h3, & h3 {
+        font-size: 1.33rem !important;
+    }
+
+    & .h4, & h4 {
+        font-size: 1.25rem !important;
+    }
+
+    & .h5, & h5 {
+        font-size: 1.15rem !important;
+    }
+
+    & .h6, & h6 {
+        font-size: 1.1rem !important;
+    }
+
 }
 
 a[class^="icon-"] {
     font-size: 1rem;
+}
+
+code, pre {
+    font-size:        1rem;
+    border:           unset;
+    color:            unset;
+    background-color: unset;
+}
+
+pre {
+    background-color: #f8f8f8;
+    border:           0;
+    border-radius:    0;
+    border-left:      0.66rem solid #c1c1c1;
+    padding:          .1rem .66rem .1rem 1.5rem;
+}
+
+.notices {
+    border-radius: 0 !important;
+    padding:       .1rem .66rem .1rem 1.5rem !important;
+}
+
+:not(pre) > code:before,
+:not(pre) > code:after {
+    content: "`";
+}
+
+.content {
+    figcaption {
+        font-weight: 400;
+        font-style:  italic;
+        color:       #666665;
+        outline:     0;
+        z-index:     300;
+        text-align:  center;
+    }
 }

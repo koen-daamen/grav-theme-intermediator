@@ -1,0 +1,81 @@
+/* width of the entire scrollbar */
+
+:root {
+    --bg-scrollbar-track:       #f8f8f8;
+    --bg-scrollbar-track-hover: #f8f8f8;
+    --bg-scrollbar-thumb-hover: #c1c1c1;
+    --bg-scrollbar-thumb:       #c1c1c1;
+    --scrollbar-div-width:      0.33rem;
+    --scrollbar-body-width:     0.33rem;
+}
+
+body::-webkit-scrollbar {
+    width:  var(--scrollbar-body-width);
+    height: var(--scrollbar-body-width);
+
+    &-track {
+        background-color: var(--bg-scrollbar-track);
+
+        &:hover {
+            background-color: var(bg-scrollbar-track-hover);
+        }
+    }
+
+    &-thumb {
+        background-color: var(--bg-scrollbar-thumb);
+
+        &:hover {
+            background-color: var(--bg-scrollbar-thumb-hover); /* color of the scroll thumb */
+        }
+    }
+}
+
+pre, div, code, textarea {
+    &::-webkit-scrollbar {
+        width:  var(--scrollbar-div-width);
+        height: var(--scrollbar-div-width);
+
+        &-track {
+            background-color: var(--bg-scrollbar-track);
+        }
+
+        &-thumb {
+            background-color: var(--bg-scrollbar-thumb-hover);
+        }
+    }
+
+    &:hover::-webkit-scrollbar {
+        &-track {
+            background-color: var(--bg-scrollbar-track);
+        }
+
+        &-thumb {
+            background-color: var(--bg-scrollbar-thumb-hover) !important;
+        }
+    }
+}
+
+nav.overlay-menu {
+    &::-webkit-scrollbar {
+        width:  var(--scrollbar-div-width);
+        height: var(--scrollbar-div-width);
+
+        &-track {
+            background-color: var(--bg-scrollbar-track);
+        }
+
+        &-thumb {
+            background-color: var(--bg-scrollbar-thumb-hover);
+        }
+    }
+
+    &:hover::-webkit-scrollbar {
+        &-track {
+            background-color: var(--bg-scrollbar-track);
+        }
+
+        &-thumb {
+            background-color: var(--bg-scrollbar-thumb-hover) !important;
+        }
+    }
+}
